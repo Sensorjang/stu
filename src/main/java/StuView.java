@@ -70,7 +70,6 @@ public class StuView extends JFrame {
         button3.setText("\u67e5\u770b\u6211\u7684\u6210\u679c");
         button3.addActionListener(e -> {
 			button3ActionPerformed(e);
-			button3ActionPerformed(e);
 		});
         contentPane.add(button3, "cell 0 3");
         pack();
