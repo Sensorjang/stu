@@ -80,10 +80,6 @@ public class Teacher extends JFrame {
         button3.setText("\u7edf\u8ba1\u6210\u679c");
         button3.addActionListener(e -> {
 			button3ActionPerformed(e);
-			button3ActionPerformed(e);
-			button3ActionPerformed(e);
-			button3ActionPerformed(e);
-			button3ActionPerformed(e);
 		});
         contentPane.add(button3, new GridBagConstraints(3, 8, 5, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
