@@ -22,8 +22,9 @@ public class LoginView extends JFrame {
             teacher.setVisible(true);
             this.setVisible(false);
         }else{//学生
-            UploadView uploadView = new UploadView();
-            uploadView.setVisible(true);
+            StuView stuView = new StuView();
+            stuView.setVisible(true);
+            stuView.stuAcc = textField1.getText();
             this.setVisible(false);
         }
     }
@@ -43,66 +44,59 @@ public class LoginView extends JFrame {
 
         //======== this ========
         setTitle("Achievement management system");
-        setFont(new Font("Dialog", Font.PLAIN, 21));
+        setFont(new Font(Font.DIALOG, Font.PLAIN, 21));
         Container contentPane = getContentPane();
         contentPane.setLayout(new GridBagLayout());
-        ((GridBagLayout)contentPane.getLayout()).columnWidths = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-        ((GridBagLayout)contentPane.getLayout()).rowHeights = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-        ((GridBagLayout)contentPane.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
-        ((GridBagLayout)contentPane.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+        ((GridBagLayout)contentPane.getLayout()).columnWidths = new int[] {0, 5, 0, 5, 0, 5, 0, 0, 90, 190, 0, 5, 0, 5, 0, 5, 0, 5, 0};
 
         //---- label4 ----
         label4.setText("\u5927\u5b66\u751f\u8bfe\u5916\u79d1\u6280\u6d3b\u52a8\u6210\u679c\u7ba1\u7406\u7cfb\u7edf");
-        label4.setFont(label4.getFont().deriveFont(label4.getFont().getSize() + 6f));
-        contentPane.add(label4, new GridBagConstraints(6, 1, 13, 2, 0.0, 0.0,
+        label4.setFont(label4.getFont().deriveFont(label4.getFont().getSize() + 13f));
+        contentPane.add(label4, new GridBagConstraints(7, 3, 3, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
+            new Insets(0, 0, 0, 0), 0, 0));
 
         //---- label1 ----
         label1.setText("\u8d26\u53f7\uff1a");
-        contentPane.add(label1, new GridBagConstraints(6, 4, 2, 1, 0.0, 0.0,
+        contentPane.add(label1, new GridBagConstraints(7, 5, 1, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
-        contentPane.add(textField1, new GridBagConstraints(10, 4, 8, 1, 0.0, 0.0,
+            new Insets(0, 0, 0, 0), 0, 0));
+        contentPane.add(textField1, new GridBagConstraints(8, 5, 2, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
+            new Insets(0, 0, 0, 0), 0, 0));
 
         //---- label2 ----
         label2.setText("\u5bc6\u7801\uff1a");
-        contentPane.add(label2, new GridBagConstraints(6, 5, 2, 1, 0.0, 0.0,
+        contentPane.add(label2, new GridBagConstraints(7, 6, 1, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
-        contentPane.add(passwordField1, new GridBagConstraints(10, 5, 8, 1, 0.0, 0.0,
+            new Insets(0, 0, 0, 0), 0, 0));
+        contentPane.add(passwordField1, new GridBagConstraints(8, 6, 2, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
+            new Insets(0, 0, 0, 0), 0, 0));
 
         //---- label3 ----
         label3.setText("\u7528\u6237\u7c7b\u578b\uff1a");
-        contentPane.add(label3, new GridBagConstraints(6, 6, 2, 1, 0.0, 0.0,
+        contentPane.add(label3, new GridBagConstraints(7, 7, 1, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
-        contentPane.add(comboBox1, new GridBagConstraints(10, 6, 8, 1, 0.0, 0.0,
+            new Insets(0, 0, 0, 0), 0, 0));
+        contentPane.add(comboBox1, new GridBagConstraints(8, 7, 2, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
+            new Insets(0, 0, 0, 0), 0, 0));
 
         //---- button1 ----
         button1.setText("\u6ce8\u518c");
-        contentPane.add(button1, new GridBagConstraints(6, 8, 4, 1, 0.0, 0.0,
+        contentPane.add(button1, new GridBagConstraints(8, 8, 1, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 0, 5), 0, 0));
+            new Insets(0, 0, 0, 0), 0, 0));
 
         //---- button2 ----
         button2.setText("\u767b\u5f55");
-        button2.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                button2ActionPerformed(e);
-            }
-        });
-        contentPane.add(button2, new GridBagConstraints(13, 8, 5, 1, 0.0, 0.0,
+        button2.addActionListener(e -> button2ActionPerformed(e));
+        contentPane.add(button2, new GridBagConstraints(9, 8, 1, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 0, 5), 0, 0));
-        pack();
-        setLocationRelativeTo(getOwner());
+            new Insets(0, 0, 0, 0), 0, 0));
+        setSize(710, 390);
+        setLocationRelativeTo(null);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
 
         comboBox1.addItem("辅导员");

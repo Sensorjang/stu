@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.7" encoding: "UTF-8"
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.6" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
@@ -8,11 +8,10 @@ new FormModel {
 			"$rowSpecs": "0, 0, 0, 0, 0, 0, 0"
 			"$hGap": 5
 			"$vGap": 5
-			"$alignTop": true
-			"$alignLeft": true
 		} ) {
 			name: "this"
 			"title": "Student"
+			"$sizePolicy": 1
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": "请选择你要上传的成果类型："
@@ -31,6 +30,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button3"
 				"text": "知识产权"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button3ActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 				"gridx": 1
 				"gridy": 2
@@ -38,6 +38,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button4"
 				"text": "科研训练"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button4ActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 				"gridx": 1
 				"gridy": 3
@@ -45,6 +46,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button5"
 				"text": "学科与科技竞赛"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button5ActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 				"gridx": 1
 				"gridy": 4
@@ -52,6 +54,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button6"
 				"text": "技能证书"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button6ActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 				"gridx": 1
 				"gridy": 5
@@ -59,13 +62,14 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button7"
 				"text": "创业实践和创新创业教育"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button7ActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 				"gridx": 1
 				"gridy": 6
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"location": new java.awt.Point( 0, 5 )
+			"size": new java.awt.Dimension( 390, 410 )
 		} )
 	}
 }
