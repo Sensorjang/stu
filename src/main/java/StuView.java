@@ -24,14 +24,12 @@ public class StuView extends JFrame {
         UploadView uploadView = new UploadView();
         uploadView.usr = 2;
         uploadView.setVisible(true);
-        this.setVisible(false);
     }
 
     private void button3ActionPerformed(ActionEvent e) {
         // TODO add your code here
         SearchAVH avh = new SearchAVH(stuAcc);
         avh.setVisible(true);
-        this.setVisible(false);
 
     }
 
